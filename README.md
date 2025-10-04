@@ -234,29 +234,6 @@ cd android
 4. **Offline Support**: No offline data persistence implemented
 5. **Performance**: Large product lists may benefit from virtualization
 
-## 🔮 Future Improvements
-
-### Short Term
-- [ ] Implement search functionality
-- [ ] Add product filtering and sorting
-- [ ] Improve error handling with error boundaries
-- [ ] Add loading skeletons for better UX
-- [ ] Implement pull-to-refresh for product list
-
-### Medium Term
-- [ ] Add user authentication
-- [ ] Implement wishlist functionality
-- [ ] Add product reviews and ratings
-- [ ] Implement push notifications
-- [ ] Add dark/light theme toggle
-
-### Long Term
-- [ ] Add offline support with data persistence
-- [ ] Implement real-time updates
-- [ ] Add social features (sharing, reviews)
-- [ ] Implement advanced analytics
-- [ ] Add multi-language support
-
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -271,7 +248,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- **Your Name** - *Initial work* - [YourGitHub](https://github.com/slexperdev)
 
 ## 🙏 Acknowledgments
 
@@ -280,13 +257,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Lucide for the beautiful icon set
 - Montserrat font family for typography
 
-## 📞 Support
-
-If you have any questions or need help, please:
-1. Check the [Issues](https://github.com/yourusername/ECommerceApp/issues) page
-2. Create a new issue if your problem isn't already reported
-3. Contact the maintainers
-
----
 
 **Happy Shopping! 🛍️**
