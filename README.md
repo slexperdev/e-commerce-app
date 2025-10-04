@@ -1,97 +1,292 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# ECommerce Mobile App
 
-# Getting Started
+A modern React Native e-commerce application built with TypeScript, Redux Toolkit, and React Navigation. This app provides a complete shopping experience with product browsing, cart management, and checkout functionality.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 🚀 Features
 
-## Step 1: Start Metro
+### Core Features
+- **Product Catalog**: Browse products with image galleries and detailed descriptions
+- **Shopping Cart**: Add, remove, and manage items with quantity controls
+- **Product Details**: Detailed product view with image gallery and descriptions
+- **Checkout Flow**: Complete order process with order confirmation
+- **Responsive Design**: Optimized for both iOS and Android devices
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### Technical Features
+- **State Management**: Redux Toolkit for global state management
+- **API Integration**: RTK Query for efficient data fetching and caching
+- **Navigation**: React Navigation with stack navigator
+- **TypeScript**: Full type safety throughout the application
+- **Custom Theming**: Consistent design system with custom colors and fonts
+- **Error Handling**: Comprehensive error states and loading indicators
+- **Pull-to-Refresh**: Refresh product data with pull gesture
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## 📱 Screenshots
 
-```sh
-# Using npm
+The app includes the following screens:
+- **Product List**: Grid view of products with search and filtering
+- **Product Details**: Individual product view with image gallery
+- **Shopping Cart**: Cart management with quantity controls
+- **Checkout**: Order processing and payment
+- **Order Confirmation**: Order success confirmation
+
+## 🛠️ Tech Stack
+
+- **React Native**: 0.81.4
+- **React**: 19.1.0
+- **TypeScript**: 5.8.3
+- **Redux Toolkit**: 2.9.0
+- **React Navigation**: 7.1.17
+- **React Native Safe Area Context**: 5.6.1
+- **Lucide React Native**: 0.544.0 (Icons)
+- **Lottie React Native**: 7.3.4 (Animations)
+
+## 📋 Prerequisites
+
+Before running this project, ensure you have the following installed:
+
+- **Node.js**: >= 20.0.0
+- **npm** or **yarn**
+- **React Native CLI**: Latest version
+- **Android Studio**: For Android development
+- **Xcode**: For iOS development (macOS only)
+- **Java Development Kit (JDK)**: 11 or higher
+- **CocoaPods**: For iOS dependencies
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd ECommerceApp
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. iOS Setup (macOS only)
+
+```bash
+cd ios
+pod install
+cd ..
+```
+
+### 4. Android Setup
+
+Ensure you have Android Studio installed and an Android emulator running or a physical device connected.
+
+### 5. Start Metro Bundler
+
+```bash
 npm start
-
-# OR using Yarn
+# or
 yarn start
 ```
 
-## Step 2: Build and run your app
+### 6. Run the Application
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+#### For Android:
+```bash
 npm run android
-
-# OR using Yarn
+# or
 yarn android
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+#### For iOS:
+```bash
 npm run ios
-
-# OR using Yarn
+# or
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 📁 Project Structure
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+```
+ECommerceApp/
+├── android/                 # Android-specific code
+├── ios/                     # iOS-specific code
+├── src/
+│   ├── app/
+│   │   └── store.ts         # Redux store configuration
+│   ├── components/
+│   │   ├── ui/              # Reusable UI components
+│   │   │   ├── ProductCard.tsx
+│   │   │   ├── CartCard.tsx
+│   │   │   ├── ImageGallery.tsx
+│   │   │   ├── CartButton.tsx
+│   │   │   └── ProductSkelton.tsx
+│   │   ├── ThemedButton.tsx
+│   │   ├── ThemedInput.tsx
+│   │   └── ThemedText.tsx
+│   ├── constants/
+│   │   └── index.ts         # App constants
+│   ├── features/
+│   │   ├── cart.ts          # Cart Redux slice
+│   │   └── cartSelector.ts  # Cart selectors
+│   ├── navigation/
+│   │   └── AppNavigator.tsx # Navigation configuration
+│   ├── screens/
+│   │   ├── ProductListScreen.tsx
+│   │   ├── ProductDetailsScreen.tsx
+│   │   ├── CartScreen.tsx
+│   │   ├── CheckoutScreen.tsx
+│   │   └── OrderConfirmationScreen.tsx
+│   ├── services/
+│   │   ├── baseQuery.ts     # RTK Query base configuration
+│   │   └── productService.ts # Product API service
+│   ├── theme/
+│   │   ├── colors.ts        # Color palette
+│   │   └── fonts.ts         # Font configuration
+│   ├── types/
+│   │   └── index.ts         # TypeScript type definitions
+│   └── utils/               # Utility functions
+├── assets/
+│   ├── fonts/               # Custom fonts (Montserrat)
+│   └── lotties/             # Lottie animation files
+├── App.tsx                  # Main app component
+├── package.json
+└── README.md
+```
 
-## Step 3: Modify your app
+## 🎨 Design System
 
-Now that you have successfully run the app, let's make changes!
+### Colors
+The app uses a dark theme with the following color palette:
+- **Background**: #181818
+- **Text**: #FFFFFF
+- **Primary**: #FF660E (Orange)
+- **Secondary**: #47FFB8 (Green)
+- **Button**: #282828
+- **Error**: #b10900ff
+- **Border**: #3A3A3C
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### Typography
+The app uses Montserrat font family with various weights:
+- Regular, Medium, SemiBold, Bold
+- Font sizes from 12px to 72px
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+### Components
+- **ThemedText**: Consistent text styling with predefined types
+- **ThemedButton**: Reusable button component
+- **ThemedInput**: Styled input component
+- **ProductCard**: Product display card
+- **CartCard**: Cart item display card
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+## 🔧 Configuration
 
-## Congratulations! :tada:
+### Babel Configuration
+The project uses Babel with module resolver for path aliases:
+- `@/` maps to `src/` directory
 
-You've successfully run and modified your React Native App. :partying_face:
+### Metro Configuration
+Metro bundler is configured for React Native 0.81.4 with asset handling.
 
-### Now what?
+### TypeScript Configuration
+Strict TypeScript configuration with path mapping support.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## 📱 API Integration
 
-# Troubleshooting
+The app integrates with a REST API for product data:
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+### Endpoints
+- `GET /v1/products` - Fetch products list
+- `GET /v1/products?offset=0&limit=10` - Paginated products
 
-# Learn More
+### Data Flow
+1. **RTK Query** handles API calls and caching
+2. **Redux Store** manages global state
+3. **Components** consume data through selectors
 
-To learn more about React Native, take a look at the following resources:
+## 🧪 Testing
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Run tests using Jest:
+
+```bash
+npm test
+# or
+yarn test
+```
+
+## 📦 Building for Production
+
+### Android
+```bash
+cd android
+./gradlew assembleRelease
+```
+
+### iOS
+1. Open `ios/ECommerceApp.xcworkspace` in Xcode
+2. Select "Any iOS Device" as target
+3. Product → Archive
+
+## 🐛 Known Issues
+
+1. **Font Loading**: Some Montserrat font variants may not load properly on certain devices
+2. **Image Optimization**: Product images could benefit from lazy loading and caching
+3. **Error Boundaries**: Missing error boundaries for better error handling
+4. **Offline Support**: No offline data persistence implemented
+5. **Performance**: Large product lists may benefit from virtualization
+
+## 🔮 Future Improvements
+
+### Short Term
+- [ ] Implement search functionality
+- [ ] Add product filtering and sorting
+- [ ] Improve error handling with error boundaries
+- [ ] Add loading skeletons for better UX
+- [ ] Implement pull-to-refresh for product list
+
+### Medium Term
+- [ ] Add user authentication
+- [ ] Implement wishlist functionality
+- [ ] Add product reviews and ratings
+- [ ] Implement push notifications
+- [ ] Add dark/light theme toggle
+
+### Long Term
+- [ ] Add offline support with data persistence
+- [ ] Implement real-time updates
+- [ ] Add social features (sharing, reviews)
+- [ ] Implement advanced analytics
+- [ ] Add multi-language support
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👥 Authors
+
+- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+
+## 🙏 Acknowledgments
+
+- React Native community for excellent documentation
+- Redux Toolkit team for the amazing state management solution
+- Lucide for the beautiful icon set
+- Montserrat font family for typography
+
+## 📞 Support
+
+If you have any questions or need help, please:
+1. Check the [Issues](https://github.com/yourusername/ECommerceApp/issues) page
+2. Create a new issue if your problem isn't already reported
+3. Contact the maintainers
+
+---
+
+**Happy Shopping! 🛍️**
