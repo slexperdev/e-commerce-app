@@ -226,14 +226,6 @@ cd android
 2. Select "Any iOS Device" as target
 3. Product → Archive
 
-## 🐛 Known Issues
-
-1. **Font Loading**: Some Montserrat font variants may not load properly on certain devices
-2. **Image Optimization**: Product images could benefit from lazy loading and caching
-3. **Error Boundaries**: Missing error boundaries for better error handling
-4. **Offline Support**: No offline data persistence implemented
-5. **Performance**: Large product lists may benefit from virtualization
-
 ## 🤝 Contributing
 
 1. Fork the repository
